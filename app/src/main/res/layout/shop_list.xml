@@ -8,10 +8,12 @@
 
     app:cardCornerRadius="10dp">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,10 +30,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_tittle"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/space_default"
                     android:layout_marginEnd="@dimen/space_default"
@@ -39,6 +44,19 @@
                     android:textSize="@dimen/text_large"
                     android:textStyle="bold"
                     tools:text="Vagabond sack" />
+                    <CheckBox
+                        android:id="@+id/item_product_item_fav"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/selector_fav"
+                        android:button="@null"
+                        android:checked="false"
+                        app:layout_constraintEnd_toStartOf="@+id/button_add"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        />
+                </LinearLayout>
+
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_price"
@@ -65,22 +83,10 @@
             </LinearLayout>
         </LinearLayout>
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/space_default"
-            android:layout_marginEnd="@dimen/space_default"
-            android:layout_marginBottom="@dimen/space_default"
-            android:textSize="@dimen/text_default"
-            tools:text="$120" />
+
     </LinearLayout>
 
-    <ImageButton
-        android:layout_width="31dp"
-        android:layout_height="29dp"
-        android:layout_gravity="end"
-        android:src="@drawable/ic_baseline_favorite_24" />
+
 
 
 </com.google.android.material.card.MaterialCardView>
